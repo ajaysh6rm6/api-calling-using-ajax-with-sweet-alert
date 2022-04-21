@@ -20,7 +20,7 @@
       swal("Error !", "Please enter your msg ?", "error");
     } else {
       var settings = {
-        "url": "https://wh07eet6fk.execute-api.us-east-1.amazonaws.com/v1/contactus",
+        "url": "https://............",
         "method": "POST",
         "headers": {
           "Content-Type": "application/json"
