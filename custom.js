@@ -72,7 +72,7 @@ $(document).ready(function () {
                     region = $("select#region").val(),
                     action = $("select#action").val(),
                     settings = {
-                        "url": "https://a4l181sq2i.execute-api.ap-southeast-1.amazonaws.com/v1/ec2-api",
+                        "url": "https://...........",
                         "method": "POST",
                         "headers": {
                             "Content-Type": "application/json"
