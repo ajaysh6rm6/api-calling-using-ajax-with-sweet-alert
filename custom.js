@@ -61,3 +61,47 @@ $(document).ready(function () {
         }
     });
 });
+
+//FOR ONCLICK SUBMIT CALLING API USING AJAX
+
+<!-- <script>
+        $(document).ready(function () {
+            $("#formsubmit").submit(function (event) {
+                event.preventDefault();
+                var applications = $("select#applications").val(),
+                    region = $("select#region").val(),
+                    action = $("select#action").val(),
+                    settings = {
+                        "url": "https://a4l181sq2i.execute-api.ap-southeast-1.amazonaws.com/v1/ec2-api",
+                        "method": "POST",
+                        "headers": {
+                            "Content-Type": "application/json"
+                        },
+                        "data": JSON.stringify({
+                            "instance_id": ["i-031b44fbcd9750ebb"],
+                            "region": region,
+                            "action": action
+                        }),
+                    };
+                $.ajax({
+                    ...settings,
+                    success: function (data) {
+                        var msg_describe = data.Reservations,
+                            msg_stop_start= data.msg ;
+                        if (action == "describe-ec2") {
+                            swal("Done !",msg_describe, "success");
+                            $("form")[0].reset();
+                        } else {
+                            swal("Done !",msg_stop_start, "success");
+                            $("form")[0].reset();                           
+                        }                        
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        swal("Error !", "Api not responding !", "error");
+                        $("form")[0].reset();
+                    }
+                });
+
+            });
+        });
+    </script> -->
